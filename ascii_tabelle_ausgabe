@@ -2,7 +2,17 @@
 #include <stdlib.h>
 
 int main() {
-  printf("\n *** ASCII-Tabelle ***\n\n");
+	char password = asciitable;
+	char pw_eingabe;
+	printf("Geben Sie zuerst ihr Password ein: ");
+	fflush(stdin);
+	scanf("%c" &pw_eingabe);
+	while(password != pw_eingabe) {
+		printf("Password falsch! Versuchen Sie es noch einmal: ");
+		fflush(stdin);
+		scanf("%c" &pw_eingabe);
+	}
+  	printf("\n *** ASCII-Tabelle ***\n\n");
 	printf(" Okt Dez Hex  Zch    Okt Dez Hex  Zch    Okt Dez Hex  Zch    Okt Dez Hex  Zch  ");
 	printf("\n ----------------------------------------------------------------------------");
 	int i = 0;
